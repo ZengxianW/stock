@@ -1,0 +1,33 @@
+[[tool.rye.sources]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cpu"
+
+[project]
+name = "stock"
+version = "0.1.0"
+description = "Add your description here"
+dependencies = [
+    "baostock>=0.8.8",
+    "matplotlib>=3.9.0",
+    "scikit-learn>=1.4.2",
+    "torch==2.3.0+cpu",
+    "efinance>=0.5.2",
+    "loguru>=0.7.2",
+    "pymongo>=4.7.2",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/stock"]
