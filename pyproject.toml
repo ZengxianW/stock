@@ -1,6 +1,6 @@
 [[tool.rye.sources]]
 name = "pytorch"
-url = "https://download.pytorch.org/whl/cpu"
+url = "https://download.pytorch.org/whl/cu121"
 
 [project]
 name = "stock"
@@ -10,10 +10,11 @@ dependencies = [
     "baostock>=0.8.8",
     "matplotlib>=3.9.0",
     "scikit-learn>=1.4.2",
-    "torch==2.3.0+cpu",
+    "torch==2.3.0+cu121",
     "efinance>=0.5.2",
     "loguru>=0.7.2",
     "pymongo>=4.7.2",
+    "tqdm>=4.64.1",
 ]
 readme = "README.md"
 requires-python = ">= 3.8"
